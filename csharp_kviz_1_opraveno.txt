@@ -1,4 +1,4 @@
-1. Které tvrzení je **chybné** 
+1. Které tvrzení je **chybné**?
 --
 C# je jediný programovací jazyk .NETu 
 --
@@ -9,37 +9,29 @@ kompiler je překladač, který přeloží celý program najednou do strojového
 interpret je překladač, který překládá program do strojového kódu po částech
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-uvod-do-jazyka-a-dot-net-framework}
 
-2. Součástí .NET fremework **není**:
+2. Součástí .NET framework **není**:
+--
+Assembler
 --
 virtuální stroj (CLR)
 --
 knihovny s komponenty
 --
 Visual Studio
---
-Assembler
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-uvod-do-jazyka-a-dot-net-framework}
 
-3. Co **nepoužijeme** při výpisu do konzole:
+3. Co **nepoužijeme** při výpisu do konzole?
 --
-/--code csharp
-příkaz Program.ReadLine[]
-\--
+příkaz `Program.ReadLine[]`
 --
-/--code csharp
-třídu Program a metodu Main()
-\--
+třídu `Program` a metodu `Main()`
 --
-/--code csharp
-příkaz Console.WriteLine() nebo Console.Write()
-\--
+příkaz `Console.WriteLine()` nebo `Console.Write()`
 --
-/--code csharp
-příkaz Console.ReadKey()
-\--
-{ARTICLE URL: csharp/zaklady/c-sharp-net-resene-priklady-promenne-typy-parsovani}
+příkaz `Console.ReadKey()`
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-promenne-typovy-system-a-parsovani}
 
-4. Ve kterém výrazu **je chyba**:
+4. Ve kterém výrazu **je chyba**?
 --
 /--code csharp
 string Jmeno = Jan Novák;
@@ -58,12 +50,13 @@ string polozka = "pecivo";
 \--
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-promenne-typovy-system-a-parsovani}
 
-5. Ve kterém výrazu **je chyba**: 
+5. Ve kterém výrazu **je chyba**? 
 --
 /--code csharp
 float prumer = 12,8;
 \--
 --
+/--code csharp
 string objednavka = "stolní PC"; 
 \--
 --
@@ -77,6 +70,7 @@ string vystup = "Mate objednano: " + objednavka + " !";
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-promenne-typovy-system-a-parsovani}
 
 6. Který kód **nevypíše** tento text: Značka mého auta je 6AM 2051
+--
 /--code csharp
 Console.ReadLine("Značka mého auta je 6AM 2051");
 \--
@@ -98,7 +92,7 @@ Console.WriteLine(text + cislo);
 \--
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-promenne-typovy-system-a-parsovani}
 
-7. Který kód **nevypíše** na konzoli **50**
+7. Který kód **nevypíše** na konzoli **50**?
 --
 /--code csharp
 string a = "25";
@@ -125,7 +119,7 @@ Console.WriteLine(y);
 \--
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-promenne-typovy-system-a-parsovani}
 
-8. Ve kterém výrazu **je chyba**:
+8. Ve kterém z kódů **je chyba**?
 --
 /--code csharp
 int vstup = Console.ReadLine();

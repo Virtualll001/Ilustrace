@@ -1,0 +1,139 @@
+1. Co z uvedeného **není podmínka**?  
+--
+'a = b'
+--
+'a != b'
+--
+'a <= b'
+--
+'a == b'
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
+
+2. Které tvrzení je **chybné**? 
+--
+'(a && b) == true' – pokud 'a' nebo 'b' je true
+--
+'(a || b) == false' – pokud 'a' i 'b' je false 
+--
+'((a && b) || c) == true' – pokud 'c' je true
+--
+'(a && b) == false' – pokud 'a' nebo 'b' je false
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
+
+3. Které tvrzení je **chybné**?  
+--
+pole je hodnotový datový typ
+--
+pole je referenční datový typ
+--
+pole ukládá větší množství proměnných stejného typu
+--
+k prvkům pole přistupujeme pomocí indexeru
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
+
+4. Co je výstupem tohoto kódu? 
+/--code csharp
+int[] trzby = { 6, 4, 10 };
+int provize = 0;
+foreach (int trzba in trzby)
+{
+    provize += trzba / 2;
+}
+Console.Write(provize);
+\--
+--
+10
+--
+3, 2, 5 
+--
+program způsobí chybu
+--
+6
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
+
+5. Jakou hodnotu má **"soucet"**?
+/--code csharp
+int[] cisla = { 6, 13, 2 };
+int soucet = cisla[0] + cisla[2];
+\--
+--
+8
+--
+2
+--
+21
+--
+6
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
+
+6. Který kód **nezobrazí**: 5 12 9 24
+--
+/--code csharp
+int[] baliky = { 5, 12, 9, 24 };
+Array.Sort(baliky);
+foreach (var balik in baliky)
+{
+     Console.Write(balik + " ");
+}
+\--
+--
+/--code csharp
+int[] baliky = { 5, 12, 9, 24 };
+Array.Reverse(baliky);
+for (int i = baliky.Length - 1; i >= 0; i--)
+{
+     Console.Write(baliky[i] + " ");
+}
+\--
+--
+/--code csharp
+int[] baliky = { 5, 12, 9, 24 };
+foreach (var balik in baliky)
+{
+     Console.Write("{0} ", balik);
+}
+\--
+--
+/--code csharp
+int[] baliky = { 5, 12, 9, 24 };
+for (int i = 0; i < baliky.Length; i++)
+{
+     Console.Write(baliky[i] + " ");
+}
+\--
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
+
+7. Co se zobrazí na konzoli?
+/--code csharp
+string[] ovoce = { "jablko", "švestka", "broskev" };           
+Array.Sort(ovoce);
+Array.Reverse(ovoce);
+Console.WriteLine(ovoce[1]);
+\--
+--
+jablko
+--
+švestka
+--
+broskev
+--
+švestka jablko broskev
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
+
+8. Jaké číslo se zobrazí na konzoli?
+/--code csharp
+int[] znamky = { 1, 2, 2, 3, 4, 5, 5 };
+znamky = znamky.Distinct().ToArray();
+int x = znamky.Last();
+int y = Array.IndexOf(znamky, x);
+Console.WriteLine(y + znamky.Length);
+\--
+--
+9
+--
+5
+--
+4
+--
+15
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
