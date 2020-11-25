@@ -2,7 +2,7 @@
 --
 `string` můžeme přetypovat na `int` a dostaneme tak ASCII hodnotu
 --
-ASCII má 256 znaků
+ASCII (DOS) má 256 znaků
 --
 nejpoužívanější kódování textů je UTF-8
 --
@@ -19,7 +19,7 @@ string veta = "Vezmu tě na mou chaloupku".ToLower();
 string vetaBezMezer = "";
 foreach (var pismeno in veta)
 {
-    if (pismeno != ' ')
+    if (pismeno != ` `)
         vetaBezMezer += pismeno;
 }
 Console.Write(vetaBezMezer.Contains("moucha")); 
@@ -34,7 +34,7 @@ vezmutenamouchaloupku
 16
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-textove-retezce-podruhe-prace-se-znaky}
 
-3. Které tvrzení je **chybné**?
+3. Které tvrzení o metodě `Format()` na typu `string` je **chybné**?
 --
 metodu `Format()` voláme na konkrétní proměnné
 --
@@ -52,11 +52,11 @@ string hlaseni = string.Format("Aktuální teplota je {0}°C.", teplota);
 4. Jaká hláška se zobrazí na konzoli?
 /--code csharp
 string sloveso = "makam";
-string akronym = new string(sloveso.Reverse().ToArray());
+string pozpatku = new string(sloveso.Reverse().ToArray());
 bool shoda = false;
-if (sloveso == akronym)
+if (sloveso == pozpatku)
     shoda = true;            
-Console.WriteLine("{0} = {1}", akronym, shoda);
+Console.WriteLine("{0} = {1}", pozpatku, shoda);
 \--
 --
 makam = True
@@ -65,7 +65,7 @@ makam = shoda
 --
 program způsobí chybu
 --
-akronym = shoda
+pozpatku = shoda
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-textove-retezce-podruhe-prace-se-znaky}
 
 5. Co je výstupem kódu: 
@@ -88,9 +88,9 @@ Jaguar
 
 6. Metoda `CompareTo()` porovnává:
 --
-první znak řetězců a vrací `-1` (abecedně před), `0` (jsou stejné), `1` (abecedně za)
+znaky v řetězcích a vrací `-1` (abecedně před), `0` (jsou stejné), `1` (abecedně za)
 --
-shodnost znaků v textových řetězcích a vrací `True` nebo `False`
+slova jako celek a vrací `True` nebo `False`
 --
 délku textových řetězců a vrací `-1` (je kratší), `0` (jsou stejné), `1` (je delší)
 --
@@ -105,20 +105,20 @@ konkatenace je spojování textových řetězců pomocí `+`
 --
 metoda `Trim()` odstraní mezery z obou stran textového řetězce
 --
-escapování znamená přidání zpětného lomítka před některé znaky (`\\`, `\“`)
+escapování znamená přidání zpětného lomítka před některé znaky (`\\`, `\"`)
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-textove-retezce-do-tretice-split-join}
 
 8. Které tvrzení je **chybné**?
 /--code csharp
 string vyuka = "abeceda:\nzačíná na \"A\"";          
-Console.Write(vyuka.IndexOf('A'));
+Console.Write(vyuka.IndexOf(`A`));
 \--
 --
 na konzoli se zobrazí číslo 19
 --
 znak `\n` zalomí řádek a je indexován jako 1 znak 
 --
-`\“` odescapovaná uvozovka - vypíše se '"'
+`\"` odescapovaná uvozovka - vypíše se `"`
 --
 na konzoli se zobrazí číslo 20
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-textove-retezce-do-tretice-split-join}

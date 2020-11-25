@@ -1,23 +1,23 @@
 1. Co z uvedeného **není podmínka**?  
 --
-'a = b'
+`a = b`
 --
-'a != b'
+`a != b`
 --
-'a <= b'
+`a <= b`
 --
-'a == b'
+`a == b`
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
 2. Které tvrzení je **chybné**? 
 --
-'(a && b) == true' – pokud 'a' nebo 'b' je true
+`if (ulozit && zavrit)` – platí v případě hodnot `ulozit = false; zavrit = false;`
 --
-'(a || b) == false' – pokud 'a' i 'b' je false 
+`if (ulozit || zavrit)` – platí v případě hodnot `ulozit = false; zavrit = true;`
 --
-'((a && b) || c) == true' – pokud 'c' je true
+`if ((ulozit && zavrit) || chyba)` – platí v případě hodnot `ulozit = true; zavrit = false; chyba = true;`
 --
-'(a && b) == false' – pokud 'a' nebo 'b' je false
+`if (ulozit && zavrit)` – Platí v případě hodnot `ulozit = true; zavrit = true;`
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
 3. Které tvrzení je **chybné**?  
@@ -51,7 +51,7 @@ program způsobí chybu
 6
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
 
-5. Jakou hodnotu má **"soucet"**?
+5. Jakou hodnotu má **soucet**?
 /--code csharp
 int[] cisla = { 6, 13, 2 };
 int soucet = cisla[0] + cisla[2];
@@ -120,20 +120,21 @@ broskev
 švestka jablko broskev
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}
 
-8. Jaké číslo se zobrazí na konzoli?
+8. Jaká čísla se zobrazí na konzoli?
 /--code csharp
-int[] znamky = { 1, 2, 2, 3, 4, 5, 5 };
-znamky = znamky.Distinct().ToArray();
-int x = znamky.Last();
-int y = Array.IndexOf(znamky, x);
-Console.WriteLine(y + znamky.Length);
+int[] znamky = { 1, 1, 2, 4, 1, 2, 1, 3 };            
+Array.Sort(znamky);            
+znamky = znamky.Distinct().ToArray();          
+int nejhorsi = znamky.Last();           
+Array.Reverse(znamky);           
+Console.WriteLine("{0}, {1}", znamky[znamky.Length-1], nejhorsi);
 \--
 --
-9
+1, 4
 --
-5
+4, 4
 --
-4
+4, 3
 --
-15
+7, 4
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-pole}

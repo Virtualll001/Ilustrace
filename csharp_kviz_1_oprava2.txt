@@ -20,7 +20,7 @@ knihovny s komponenty
 Visual Studio
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-uvod-do-jazyka-a-dot-net-framework}
 
-3. Co **nepoužijeme** při výpisu do konzole?
+3. Co **nepoužijeme** při výpisu do konzole a počkání na klávesu uživatele?
 --
 příkaz `Program.ReadLine[]`
 --
@@ -61,7 +61,7 @@ string objednavka = "stolní PC";
 \--
 --
 /--code csharp
-int nasobky = 5*6;
+int soucin = 5*6;
 \--
 --
 /--code csharp
