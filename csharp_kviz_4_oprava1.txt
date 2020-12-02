@@ -3,13 +3,13 @@
 int rybari = 4;
 int zizaly = 23;
 int zbytek = zizaly % rybari;
-string zprava = (zbytek >= 3) ? "Dostanou i slepice." : (zbytek == 1 || zbytek == 2) ? "Vytrolíme holky..." : "Vyšlo to přesně.";
+string zprava = (zbytek == 0) ? "Vyšlo to přesně." : "Dostanou i slepice.";
 Console.WriteLine(zprava);
 \--
 --
 Dostanou i slepice.
 --
-Vytrolíme holky...
+5,75
 --
 Vyšlo to přesně.
 --
@@ -22,15 +22,15 @@ program způsobí chybu
 --
 `switch` použijeme pro porovnání jedné hodnoty s mnoha možnými (pro hledání shody)
 --
-pokud `case` najde shodu, cyklus se ukončí  
+výraz, který má `switch` v kulatých závorkách, musí být celočíselný, char nebo string  
 --
 „propadávání“ je technika, kdy jsou `case` ve skupinách (skupina má jeden společný kód a `break;`) 
 {ARTICLE URL: csharp/zaklady/podminky-v-csharp-podruhe-ternarni-vyraz-a-propadavaci-switch}
 
 3. Co je výsledkem tohoto kódu?
 /--code csharp
-string[] parametry = { "majetek", "vzhled", "vek", "IQ", "kondice", "status" };
-string vyjadreni = (parametry.Contains("vzhled") && !parametry.Contains("nedostatky")) ? "To by šlo. " : "To by nešlo. ";
+string[] parametry = { "bohatá", "hezká", "mladá", "chytrá", "zachovalá", "svobodná" };
+string vyjadreni = (parametry.Contains("hezká") && !parametry.Contains("vdaná")) ? "To by šlo. " : "To by nešlo. ";
 vyjadreni += (parametry.Count() > 3) ? "Mohu pozvat na kávu? " : "Zavolám ti... ";
 Console.WriteLine(vyjadreni);
 \--
@@ -62,7 +62,7 @@ if (banan < 1)
 2 a více
 --
 1
-{ARTICLE URL: csharp/zaklady/cykly-v-csharp-net-podruhe-do-while-break-a-continue}
+{ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
 5. Které tvrzení je **chybné**?
 --
@@ -104,7 +104,7 @@ do
     if (heslo != "Ch@rlie123")
         pokus++;
     else
-        pokus = 1;
+        pokus += 1;
 }
 while ((heslo != "Ch@rlie123") && (pokus != 3));
 \--
