@@ -36,7 +36,7 @@ Console.WriteLine(a /* doplň */ /* doplň */);
 //b
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
-4. Doplň tak, aby konzole zobrazila "Výborně!":
+4. Doplň tak, aby **obě** podmínky platily:
 /--code csharp
 int plat = 55000;
 int vek = 32;
@@ -91,14 +91,14 @@ switch (den)
 //default
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
-7. Doplň tak, aby **obě** podmínky byly **True**:
+7. Doplň tak, aby byla podmínka if **True**:
 /--code csharp
 string jmeno = "UvuvwevwevweOnyetenyevweUgwemubwemOssas";
-if (jmeno.StartsWith("Uvuvwe") /* doplň */ (jmeno.Length /* doplň */ 30))
+if (jmeno.StartsWith("Onyete") /* doplň */ (jmeno.Length /* doplň */ 30))
     Console.WriteLine("Dlouhé africké jméno: " + jmeno);
 \--
 --
-//&&
+//||
 //>
 {ARTICLE URL: csharp/zaklady/c-sharp-tutorial-podminky-vetveni-if-switch}
 
@@ -143,7 +143,7 @@ int delitel = 2;
 /* doplň */ (delitel /* doplň */ 0)
     Console.WriteLine("Nulou nikdy nedělíme!");
 /* doplň */
-    Console.WriteLine(delenec/delitel);
+    Console.WriteLine(delenec / delitel);
 \--
 --
 //if
